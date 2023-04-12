@@ -1,0 +1,11 @@
+.sidebar_icons {
+    position: absolute;
+    top: 39%;
+    right: 20px;
+    color: white;
+}
+
+.sidebar_button {
+    padding: 10px;
+    text-align: center;
+}

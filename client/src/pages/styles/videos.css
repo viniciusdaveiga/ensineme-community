@@ -1,0 +1,40 @@
+html {
+    scroll-snap-type: y mandatory;
+  }
+  .app{
+    height: 100%;
+    display: grid;
+    place-items: center;
+    padding-bottom: 60px;
+  }
+  .logo {
+    font-family: 'Comfortaa', arial, sans-serif;
+    font-size: 50px;
+  }
+  .color01{
+    color: #81725b;
+  }
+  .color02{
+    color:#74c9b0;
+  }
+  .app_videos {
+    position: relative;
+    height: 500px;
+    border-radius: 20px;
+    overflow: scroll;
+    width: 80%;
+    max-width: 800px;
+    scroll-snap-type: y mandatory;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera*/
+  .app_videos::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox*/
+  .app_videos {
+    -ms-overflow-style: none; /* IE and Firefox*/
+    scrollbar-width: none; /* FIrefox */
+  }

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { fetchProtectedInfo, onLogout } from '../api/auth'
 import Layout from '../components/layout'
+import VideoScreen from './videos'
 import { unauthenticateUser } from '../redux/slices/authSlice'
 
 const Dashboard = () => {
@@ -45,7 +46,9 @@ const Dashboard = () => {
       <Layout>
         <h1>Dashboard de vídeos</h1>
         <h2>{protectedData}</h2>
-
+        <div className='container-videos'>
+          <VideoScreen />
+        </div>
         <button onClick={() => logout()} className='btn btn-primary'>
           Sair
         </button>

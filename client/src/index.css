@@ -56,6 +56,10 @@ h3 {
   border-radius: 5px;
 }
 
+.container-videos {
+  height: 100%;
+}
+
 .container_inputs label {
   float: left;
 }
