@@ -9,14 +9,14 @@ const Navbar = () => {
       <div className='container'>
         <div>
           <NavLink to='/'>
-            <span className='navbar-brand mb-0 h1'>Home</span>
+            <span className='navbar-brand mb-0 h1'>ensineme.com</span>
           </NavLink>
         </div>
 
         {isAuth ? (
           <div>
             <NavLink to='/dashboard' className='mx-3'>
-              <span>Dashboard</span>
+              <span>Dashboard de vídeos</span>
             </NavLink>
           </div>
         ) : (
@@ -26,7 +26,7 @@ const Navbar = () => {
             </NavLink>
 
             <NavLink to='/register' className='mx-3'>
-              <span>Register</span>
+              <span>Registro</span>
             </NavLink>
           </div>
         )}

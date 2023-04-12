@@ -63,8 +63,11 @@ exports.login = async (req, res) => {
 
 exports.protected = async (req, res) => {
   try {
+    const userEmail = req.user.email;
+    // console.log(userEmail)
     return res.status(200).json({
-      info: 'protected info',
+      info: 'Teste de vídeos',
+      email: userEmail,
     })
   } catch (error) {
     console.log(error.message)

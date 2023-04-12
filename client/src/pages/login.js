@@ -32,12 +32,12 @@ const Login = () => {
 
   return (
     <Layout>
-      <form onSubmit={(e) => onSubmit(e)} className='container mt-3'>
+      <form onSubmit={(e) => onSubmit(e)} className='container container_inputs mt-3'>
         <h1>Login</h1>
 
         <div className='mb-3'>
           <label htmlFor='email' className='form-label'>
-            Email address
+            Endereço de email
           </label>
           <input
             onChange={(e) => onChange(e)}
@@ -46,14 +46,14 @@ const Login = () => {
             id='email'
             name='email'
             value={values.email}
-            placeholder='test@gmail.com'
+            placeholder='teste@gmail.com'
             required
           />
         </div>
 
         <div className='mb-3'>
           <label htmlFor='password' className='form-label'>
-            Password
+            Senha
           </label>
           <input
             onChange={(e) => onChange(e)}
@@ -62,7 +62,7 @@ const Login = () => {
             className='form-control'
             id='password'
             name='password'
-            placeholder='passwod'
+            placeholder='senha'
             required
           />
         </div>
@@ -70,7 +70,7 @@ const Login = () => {
         <div style={{ color: 'red', margin: '10px 0' }}>{error}</div>
 
         <button type='submit' className='btn btn-primary'>
-          Submit
+          Entrar
         </button>
       </form>
     </Layout>
