@@ -32,7 +32,7 @@ function Video({
                 className={styles.video_player} 
                 loop 
                 autoPlay
-                onClick={onVideoPress} 
+                OnClick={onVideoPress} 
                 ref={videoRef}
                 src={url}>
             </video>

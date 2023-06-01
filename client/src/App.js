@@ -6,6 +6,7 @@ import {
   Outlet,
 } from 'react-router-dom'
 import Dashboard from './pages/dashboard'
+import Profile from './pages/profile'
 import Home from './pages/home'
 import Login from './pages/login'
 import Register from './pages/register'
@@ -21,6 +22,7 @@ const RestrictedRoutes = () => {
   const { isAuth } = useSelector((state) => state.auth)
 
   return <>{!isAuth ? <Outlet /> : <Navigate to='/dashboard' />}</>
+  return <>{!isAuth ? <Outlet /> : <Navigate to='/profile' />}</>
 }
 
 const App = () => {
@@ -31,6 +33,7 @@ const App = () => {
 
         <Route element={<PrivateRoutes />}>
           <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/profile' element={<Profile />} />
         </Route>
 
         <Route element={<RestrictedRoutes />}>

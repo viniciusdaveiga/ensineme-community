@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
+import { CgProfile } from 'react-icons/cg';
 
 const Navbar = () => {
   const { isAuth } = useSelector((state) => state.auth)
@@ -17,6 +18,9 @@ const Navbar = () => {
           <div>
             <NavLink to='/dashboard' className='mx-3'>
               <span>Dashboard de vídeos</span>
+            </NavLink>
+            <NavLink to='/profile' className='mx-3'>
+              <span><CgProfile size={20}/></span>
             </NavLink>
           </div>
         ) : (

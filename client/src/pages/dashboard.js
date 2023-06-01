@@ -25,7 +25,7 @@ const Dashboard = () => {
     try {
       const { data } = await fetchProtectedInfo()
 
-      setProtectedData(data.info)
+      setProtectedData(data.name)
 
       setLoading(false)
     } catch (error) {
@@ -39,13 +39,13 @@ const Dashboard = () => {
 
   return loading ? (
     <Layout>
-      <h1>Loading...</h1>
+      <h1>Carregando...</h1>
     </Layout>
   ) : (
     <div>
       <Layout>
         <h1>Dashboard de vídeos</h1>
-        <h2>{protectedData}</h2>
+        <h2>Olá, {protectedData}</h2>
         <div className='container-videos'>
           <VideoScreen />
         </div>
