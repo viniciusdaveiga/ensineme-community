@@ -45,13 +45,22 @@ exports.register = async (req, res) => {
 }
 
 exports.update = async (req, res) => {
-  const { age, phone, name, course, semester, university } = req.body;
-  const { user_id } = req.user;
+  const { age, phone, name, course, semester, university } = req.body
+  const user_id = req.user.user_id;
+
+  console.log(user_id);
 
   try {
     await db.query(
-      'UPDATE users SET age = $1, phone = $2, name = $3, course = $4, semester = $5, university = $6 WHERE user_id = $7',
-      [age, phone, name, course, semester, university, user_id]
+      'UPDATE users SET age = $1, phone = $2, name = $3, course = $4, semester = $5, university = $6 WHERE user_id = $7',[
+        age, 
+        phone, 
+        name, 
+        course, 
+        semester, 
+        university, 
+        user_id
+      ]
     );
 
     return res.status(200).json({
@@ -95,6 +104,7 @@ exports.protected = async (req, res) => {
     // const userEmail = req.user.email;
     // console.log(userName)
     // console.log(userEmail)
+    const user_id = req.user.user_id;
     return res.status(200).json({
       info: 'Teste de vídeos',
       name: req.user.name,

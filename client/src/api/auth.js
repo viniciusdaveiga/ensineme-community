@@ -8,6 +8,15 @@ export async function onRegistration(registrationData) {
   )
 }
 
+export const onUpdateProfile = async (updatedData) => {
+  try {
+    const response = await axios.post('http://localhost:8000/api/update', updatedData);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
 export async function onLogin(loginData) {
   return await axios.post('http://localhost:8000/api/login', loginData)
 }
